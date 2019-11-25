@@ -1,0 +1,31 @@
+<div class="col-md-4 offset-4 mt-4 mb-4 card card-body">
+        <form action=""[formGroup]="form" (ngSubmit)="loginData(form)">
+            <h1 class="text-center text-white bg-dark">reactive form</h1>
+            <div class="form-group">
+                <input type="movie" name="email" id="email" class="form-control"placeholder="add movie"formControlName="movie">
+                <div *ngIf="movie.touched && movie.invalid">
+    <p *ngIf="movie.errors.required" class="text-danger">this field is required</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="title" name="email" id="email" class="form-control"placeholder="movie title"formControlName="title">
+                <div *ngIf="title.touched && title.invalid">
+    <p *ngIf="title.errors.required" class ="text-danger">this field is required</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="img" name="img" id="img" class="form-control"placeholder="movie image url"formControlName="img">
+                <div *ngIf="img.touched && img.invalid">
+    <p *ngIf="img.errors.required" class ="text-danger">this field is required</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea name="desc" id="desc" cols="20" rows="5"  class="form-control"placeholder="movie description"formControlName="desc" ></textarea>
+               
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-success float-right"[disabled]="form.invalid">add</button>
+            </div>
+        </form>
+    </div>
+    

@@ -1,0 +1,4 @@
+10,Radhika,200000,F
+11,Abhinav,400000,M
+12,Ramesh,5000000,M
+13,Kiran,6000000,M

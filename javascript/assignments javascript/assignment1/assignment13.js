@@ -1,0 +1,20 @@
+var a=new Array(1,2,3,4,5);
+var b=new Array("roopa","nadhini","rohini");
+var c=new Array(null);
+var d=new Array();
+var e=new Array("nandhini",20,"Abipsa",20)
+console.log(a[0]);
+console.log(a[1]);
+console.log(a[2]);
+console.log(a[3]);
+console.log(a[4]);
+console.log(b[0]);
+console.log(b[1]);
+console.log(b[2]);
+console.log(d[0]);
+console.log(d[0]="roopa");
+console.log(d[1]="ram");
+console.log(d[7]="amana");
+console.log(a);
+console.log(d);
+console.log(e);

@@ -1,0 +1,8 @@
+#grad{
+    height:500px;
+    background:linear-gradient(red, lime,violet);
+    /* background:linear-gradient(to right, red, lime,violet); */
+    /* background:radial-gradient(red, lime,violet); */
+ 
+  
+}
