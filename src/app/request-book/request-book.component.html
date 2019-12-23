@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary" *ngIf="isSLoggedIn">
+  <a class="navbar-brand text-light" routerLink="/display-book-student">Display Books</a>
+  <a class="navbar-brand text-light" routerLink="/search-book-student">Search Book</a>
+  <a class="navbar-brand text-light" routerLink="/request-book">Request Book</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+<form class="col-md-5 offset-4 mt-5 card card-body" #form="ngForm" (ngSubmit)="requestData(form)">
+  <h3 align="center">Request Book</h3>
+  Student id:
+  <input type="number" name="id" class="form-control" #id="ngModel" ngModel requried placeholder="enter student id">
+  <div class="form-group">
+    Book Id:<br>
+    <input type="number" name="bid" id="bid" class="form-control" placeholder="Enter Book id" #bid="ngModel"
+      ngModel requried>
+    <div *ngIf="bid.touched && bid.invalid">
+      <p class="alert alert-danger" *ngIf="bid.errors.required">*This
+        field is required</p>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="button" class="btn btn-primary float-right" [disabled]="form.invalid">Request</button>
+  </div>
+</form>
+<
